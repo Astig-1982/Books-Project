@@ -56,7 +56,7 @@ class Period(models.Model):
         return self.name
 
 
-class Styles(models.Model):
+class Style(models.Model):
     name = models.CharField(max_length=254, null=True, blank=False)
 
     def __str__(self):
