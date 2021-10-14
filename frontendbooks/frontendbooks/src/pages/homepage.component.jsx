@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 
 import './homepage.styles.css';
 
 const HomePage = () => {
     return(
         <div className='home-page'>
-            hello world
+            <h1>The Books Universe</h1>
         </div>
     );
 };
