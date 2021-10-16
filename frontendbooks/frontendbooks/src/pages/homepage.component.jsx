@@ -1,8 +1,9 @@
 import React, { useState, useEffect} from 'react';
 
+
 const HomePage = () => {
 
-    const [books, getBooks] = useState()
+    const [books, getBooks] = useState([])
     const [error, setError] = useState()
 
     useEffect(() => {
@@ -13,18 +14,18 @@ const HomePage = () => {
                 getBooks(books)
                 }
             catch(error) {
-                setError(error)
+                setError('There was an error loading.')
                 }
         }
 
         getAllBooks()
     }, [])
 
-    console.log({error})
-    console.log({books})
     return(
         <div className='home-page'>
-            <h1>The Books Universe</h1>
+            {books.map((book) => (
+                    <h2>{book.name}</h2>
+                ))}
         </div>
         
     );
