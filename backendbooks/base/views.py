@@ -14,7 +14,10 @@ def testApp(request):
 
 
 @api_view(['GET'])
-def get_all_books(request):
+def all_books(request):
+    """
+    this view retrieves all books 
+    """
     books = Book.objects.all()
     serializer = BookSerializer(books, many=True)
     return Response(serializer.data)
