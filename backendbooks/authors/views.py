@@ -8,7 +8,7 @@ from .serializers import AuthorSerializer
 # Create your views here.
 
 @api_view(['GET'])
-def all_URLS(request):
+def author_urls(request):
     authors_urls = [
         'all_authors/'
     ]
@@ -16,7 +16,7 @@ def all_URLS(request):
 
 
 @api_view(['GET'])
-def all_Authors(request):
+def all_authors(request):
     authors = Author.objects.all()
     serializer = AuthorSerializer(authors, many=True)
     return Response(serializer.data)

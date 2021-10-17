@@ -8,8 +8,11 @@ from .serializers import BookSerializer
 # Create your views here.
 
 @api_view(['GET'])
-def testApp(request):
-    return Response('Hello world there')
+def books_urls(request):
+    books_urls = [
+        'all_books/'
+    ]
+    return Response(books_urls)
 
 
 @api_view(['GET'])
