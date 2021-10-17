@@ -10,7 +10,8 @@ from .serializers import BookSerializer
 @api_view(['GET'])
 def books_urls(request):
     books_urls = [
-        'all_books/'
+        'all_books/',
+        'all_authors/'
     ]
     return Response(books_urls)
 
