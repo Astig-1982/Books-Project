@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
+import { Card } from 'react-bootstrap'
 
-
-const HomePage = () => {
+const BooksPage= () => {
 
     const [books, getBooks] = useState([])
     const [error, setError] = useState()
@@ -25,11 +25,11 @@ const HomePage = () => {
         <div className='home-page'>
             {books.map((book) => (
                     <h2 key={book.id}>{book.name}</h2>
-                ))}
+                ))} 
         </div>
         
     );
 };
 
-export default HomePage;
+export default BooksPage;
 

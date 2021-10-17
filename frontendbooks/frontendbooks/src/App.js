@@ -1,10 +1,13 @@
 import './App.css';
-import HomePage from './pages/homepage.component';
+
+import { Switch, Route, Redirect } from 'react-router-dom';
+
+import BooksPage from './pages/bookspage/homepage.component';
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <Route exact path='/' component={ BooksPage } />
     </div>
   );
 }
