@@ -1,7 +1,8 @@
 import React, { useState, useEffect} from 'react';
 import { Card } from 'react-bootstrap'
 
-const BooksPage= () => {
+
+const BooksPage = () => {
 
     const [books, getBooks] = useState([])
     const [error, setError] = useState()
@@ -32,4 +33,3 @@ const BooksPage= () => {
 };
 
 export default BooksPage;
-
