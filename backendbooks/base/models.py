@@ -16,7 +16,7 @@ class Book_Genre(models.Model):
 
 class Book(models.Model):
     name = models.CharField(max_length=254)
-    # image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
     genre = ForeignKey(Book_Genre, on_delete=models.SET_NULL, max_length=50, null=True, blank=True) # blank=True means the filed is required to be completed in django admin 
     author = ForeignKey(Author, on_delete=models.SET_NULL, max_length=254, null=True, blank=True)
     about = TextField(max_length=300, null=True, blank=False)
