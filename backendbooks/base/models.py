@@ -23,7 +23,7 @@ class Book(models.Model):
     summary = TextField(null=True, blank=False)
     period = ForeignKey(Period, on_delete=models.SET_NULL, max_length=100, null=True, blank=True)
     year_of_writting = IntegerField(null=True, blank=False)
-    number_of_pages = IntegerField(null=False, blank=True)
+    number_of_pages = IntegerField(null=False, blank=True) 
 
     def __str__(self):
         return self.name
