@@ -1,0 +1,16 @@
+.home-section {
+    width: 13.5vw;
+    height: 55vh;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login {
+    float: right
+}
+
+.authors {
+    float: left;
+}

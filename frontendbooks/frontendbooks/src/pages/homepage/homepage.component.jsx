@@ -3,25 +3,27 @@ import { Link } from 'react-router-dom';
 import HomeSection from '../../components/homesection.component';
 import { Container, Row, Col } from 'react-bootstrap';
 
+import './homepage.styles.css';
+
 const HomePage = () => {
 
     return(
         <div>
             <Container >
-                <Row>
-                    <Col>
+                <Row className='home-page-row'>
+                    <Col className='pull-right'>
                         <Link to='/all-books'>
-                            <HomeSection sectionLink={'log in'} />
+                            <HomeSection logIn sectionLink={'log in'} />
                         </Link>
                     </Col>
-                    <Col>
+                    <Col className=''>
                         <Link to='/all-books'>
                             <HomeSection sectionLink={'books'} />
                         </Link>
                     </Col>
-                    <Col>
+                    <Col className=''>
                         <Link to='/all-books'>
-                            <HomeSection sectionLink={'authors'} />
+                            <HomeSection authors sectionLink={'authors'} />
                         </Link>
                     </Col>
                 </Row>
