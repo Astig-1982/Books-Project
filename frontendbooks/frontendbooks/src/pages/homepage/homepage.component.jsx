@@ -6,9 +6,15 @@ const HomePage = () => {
 
     return(
         <div>
-            <HomeSection />
-            <HomeSection />
-            <HomeSection />
+            <Link to='/all-books'>
+                <HomeSection sectionLink={'log in'} />
+            </Link>
+            <Link to='/all-books'>
+                <HomeSection sectionLink={'books'} />
+            </Link>
+            <Link to='/all-books'>
+                <HomeSection sectionLink={'authors'} />
+            </Link>
         </div>
     )
     

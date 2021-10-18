@@ -1,13 +1,10 @@
 import React, { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
-const HomeSection = () => {
+const HomeSection = ({sectionLink}) => {
     return(
         <div>
-            <h1>BOOKS UNIVERSE</h1>
-            <Link to='/all-books'>
-                All Books
-            </Link>
+            <h2>{sectionLink}</h2>
         </div>
     )
     

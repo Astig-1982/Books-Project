@@ -24,6 +24,7 @@ const BooksPage = () => {
 
     return(
         <div className='home-page'>
+            <h1>Books</h1>
             {books.map((book) => (
                     <h2 key={book.id}>{book.name}</h2>
                 ))} 
