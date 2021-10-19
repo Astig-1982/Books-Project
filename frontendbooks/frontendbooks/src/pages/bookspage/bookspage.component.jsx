@@ -9,6 +9,7 @@ import { getBooks, getError } from '../../redux/books/books.actions';
 const BooksPage = ({ hello,books, getBooks }) => {
 
     useEffect(() => {
+        // this function calls the API and retrieves the books
         const getAllBooks = async() => {
             try {
                 const response = await fetch('http://127.0.0.1:8000/all_books/')
