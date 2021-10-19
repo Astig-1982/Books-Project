@@ -1,9 +1,10 @@
 import bookTypes from "./books.types"
 
-INITIAL_STATE = {
+const INITIAL_STATE = {
     books: [],
     error: '',
-    loading: false
+    loading: false,
+    hello: 'hello'
 }
 
 const booksReducer = (state = INITIAL_STATE, action) => {
@@ -18,7 +19,7 @@ const booksReducer = (state = INITIAL_STATE, action) => {
         case bookTypes.GET_BOOKS: {
             return {
                 ...state,
-                error: 'OOPS, IT SEEMS THERE WAS AN ERROR WITH THE SERVER',
+                error: action.payload,
                 loading: false
             }
         }
@@ -30,6 +31,9 @@ const booksReducer = (state = INITIAL_STATE, action) => {
                 loading: false
             }
         }
+
+        default:
+            return state
     }
 }
 

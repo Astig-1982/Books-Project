@@ -1,8 +1,8 @@
-import { createSelector } from 'react'
+import { createSelector } from 'reselect'
 
-const getBooks = state = state.books
+const getBooks = state => state.books
 
-export const books = createSelector(
+export const hello = createSelector(
     [getBooks],
-    getBooks => getBooks.books
+    getBooks => getBooks.hello
 )

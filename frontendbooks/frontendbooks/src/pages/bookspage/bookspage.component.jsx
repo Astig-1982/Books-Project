@@ -1,11 +1,12 @@
 import React, { useState, useEffect} from 'react';
-import { Card } from 'react-bootstrap'
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect'; // yarn add reselect
+
+import { hello } from '../../redux/books/books.selectors';
+import { getBooks, getError } from '../../redux/books/books.actions';
 
 
-const BooksPage = () => {
-
-    const [books, getBooks] = useState([])
-    const [error, setError] = useState()
+const BooksPage = ({ hello,books, getBooks }) => {
 
     useEffect(() => {
         const getAllBooks = async() => {
@@ -15,7 +16,7 @@ const BooksPage = () => {
                 getBooks(books)
                 }
             catch(error) {
-                setError('There was an error loading.')
+                getError('There was an error loading.')
                 }
         }
 
@@ -25,6 +26,7 @@ const BooksPage = () => {
     return(
         <div className='home-page'>
             <h1>Books</h1>
+            <h1>{hello}</h1>
             {books.map((book) => (
                     <h2 key={book.id}>{book.name}</h2>
                 ))} 
@@ -33,4 +35,13 @@ const BooksPage = () => {
     );
 };
 
-export default BooksPage;
+const mapStateToProps = createStructuredSelector({
+    hello: hello
+});
+
+const mapDispatchToProps = dispatch => ({
+    getBooks: books => dispatch(getBooks(books)),
+    getBooks: error => dispatch(getError(error))
+});
+
+ export default connect(mapStateToProps, mapDispatchToProps)(BooksPage);
