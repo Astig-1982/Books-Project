@@ -1,13 +1,13 @@
-const loadingBooks = () => ({
+export const loadingBooks = () => ({
     type: 'LOADING_BOOKS',
 });
 
-const getBooks = (allBooks) => ({
+export const getBooks = (allBooks) => ({
     type: 'GET_ALL_BOOKS',
     payload: allBooks
 });
 
-const getError = (error) => ({
+export const getError = (error) => ({
     type: 'GET_ERROR',
     payload: error
 });

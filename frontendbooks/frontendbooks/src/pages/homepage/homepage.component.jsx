@@ -15,7 +15,12 @@ const HomePage = () => {
                         <HomeSection logIn sectionLink={'log in'}>
                             Log In
                         </HomeSection>
-                        
+                        <HomeSection logIn sectionLink={'log in'}>
+                            Books
+                        </HomeSection>
+                        <HomeSection logIn sectionLink={'log in'}>
+                            Authors
+                        </HomeSection>
                     </Col>
                 </Row>
             </Container>
