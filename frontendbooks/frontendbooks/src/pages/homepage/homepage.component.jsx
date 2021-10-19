@@ -11,20 +11,11 @@ const HomePage = () => {
         <div>
             <Container >
                 <Row className='home-page-row'>
-                    <Col className='pull-right'>
-                        <Link to='/all-books'>
-                            <HomeSection logIn sectionLink={'log in'} />
-                        </Link>
-                    </Col>
-                    <Col className=''>
-                        <Link to='/all-books'>
-                            <HomeSection sectionLink={'books'} />
-                        </Link>
-                    </Col>
-                    <Col className=''>
-                        <Link to='/all-books'>
-                            <HomeSection authors sectionLink={'authors'} />
-                        </Link>
+                    <Col>
+                        <HomeSection logIn sectionLink={'log in'}>
+                            Log In
+                        </HomeSection>
+                        
                     </Col>
                 </Row>
             </Container>
