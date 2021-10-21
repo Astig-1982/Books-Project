@@ -8,10 +8,10 @@ import './homepage.styles.css';
 const HomePage = () => {
 
     return(
-        <div>
-            <Container >
-                <Row className='home-page-row'>
-                    <Col>
+        <div className='home-container'>
+            <Container>
+                <Row>
+                    <Col className='home-page-col'>
                         <div className='home-page-div'>
                             <HomeSection login>
                                 Log In
