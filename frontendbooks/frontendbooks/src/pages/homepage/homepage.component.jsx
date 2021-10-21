@@ -12,13 +12,13 @@ const HomePage = () => {
             <Container >
                 <Row className='home-page-row'>
                     <Col>
-                        <HomeSection logIn sectionLink={'log in'}>
+                        <HomeSection>
                             Log In
                         </HomeSection>
-                        <HomeSection logIn sectionLink={'log in'}>
+                        <HomeSection>
                             Books
                         </HomeSection>
-                        <HomeSection logIn sectionLink={'log in'}>
+                        <HomeSection>
                             Authors
                         </HomeSection>
                     </Col>
