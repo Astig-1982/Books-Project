@@ -1,3 +1,9 @@
 .home-page-row {
     margin-top: 19vh;
 }
+
+.home-page-div {
+    width: 60vw;
+    margin: 0 auto;
+    text-align: center;
+}
