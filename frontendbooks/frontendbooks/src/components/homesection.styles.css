@@ -2,14 +2,20 @@
     border: 1px solid #000;
 }
 
-.books-div {
-    width: 31vw;
-    height: 26vw;
-}
-
 .authors-div {
     width: 31vw;
+    height: 26vw;
+    position: absolute;
+    top: 25.9rem;
+    left: 10.9rem;
+}
+
+.books-div {
+    width: 31vw;
     height: 36vw;
+    position: absolute;
+    top: 5.5rem;
+    right: 10.9rem;
 }
 
 /*

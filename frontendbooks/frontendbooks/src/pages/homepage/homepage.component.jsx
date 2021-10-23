@@ -12,13 +12,13 @@ const HomePage = () => {
             <Container>
                 <Row>
                     <Col className='home-page-col'>
-                        <HomeSection books booksDiv>
-                            Books
+                        <HomeSection authors>
+                            Authors
                         </HomeSection>
                     </Col>
                     <Col className='home-page-div home-page-col'>
-                        <HomeSection authors authorsDiv>
-                            Authors
+                        <HomeSection books>
+                            Books
                         </HomeSection>
                     </Col>
                 </Row>

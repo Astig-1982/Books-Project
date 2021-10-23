@@ -3,6 +3,10 @@
     background: url(./books.jpeg) no-repeat center center fixed;
 }
 
+.home-page-col {
+    position: relative;
+}
+
 /*
 
 .home-page-div {
