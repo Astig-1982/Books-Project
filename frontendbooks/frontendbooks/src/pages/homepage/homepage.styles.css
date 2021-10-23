@@ -3,6 +3,8 @@
     background: url(./books.jpeg) no-repeat center center fixed;
 }
 
+/*
+
 .home-page-div {
     width: 60vw;
     margin: 0 auto;
@@ -12,3 +14,9 @@
 .home-page-col {
     margin-top: 18vh;
 }
+
+.login-div {
+    background: blue;
+}
+
+*/

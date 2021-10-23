@@ -1,7 +1,36 @@
 .home-section-div {
-    width: 16.5vw;
+    border: 1px solid #000;
+}
+
+.books-div {
+    width: 31vw;
+    height: 26vw;
+}
+
+.authors-div {
+    width: 31vw;
+    height: 36vw;
+}
+
+/*
+
+.home-section-div {
+    width: 20vw;
     height: 60vh;
     display: inline-block;
+    transition-property: transform, border-right;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.loginDiv:hover {
+    color: #000000;
+    transform: scale3d(1.1,1.1,2);
+    border-right: 1px solid #000000;
+}
+
+.loginDiv:hover + .booksDiv {
+    border-left: none;
 }
 
 .links {
@@ -10,20 +39,22 @@
 }
 
 .home-section-links-div {
-    padding-top: 81%;
+    padding-top: 75%;
     height: 100%;
 }
 
-.login {
+.loginDiv {
     border-left: 1px solid #000000;
 }
 
-.books {
+.booksDiv {
     border-left: 1px solid #000000;
     border-right: 1px solid #000000;
 }
 
-.authors {
+.authorsDiv {
     border-right: 1px solid #000000;
 }
+
+*/
 

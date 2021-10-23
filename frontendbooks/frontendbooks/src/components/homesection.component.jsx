@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 import './homesection.styles.css';
 
-const HomeSection = ({ children, login, books, authors }) => {
+const HomeSection = ({ children, booksDiv, authorsDiv }) => {
     return(
-        <div className='home-section-div'>
+        <div className={`${booksDiv ? 'books-div' : authorsDiv ? 'authors-div' : ''} home-section-div`}>
             <Link to='/all-books' className='links'>
-                <div  className={`${login ? 'login' : books ? 'books' : authors ? 'authors' : ''} home-section-links-div`} >
+                <div>
                     <h3>{children}</h3>
                 </div>
             </Link>
