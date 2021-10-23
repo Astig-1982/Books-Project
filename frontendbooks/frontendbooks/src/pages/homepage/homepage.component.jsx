@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import HomeSection from '../../components/homesection.component';
+import HomeSection from '../../components/homesection/homesection.component';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import './homepage.styles.css';

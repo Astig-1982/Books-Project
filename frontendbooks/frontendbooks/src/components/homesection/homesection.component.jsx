@@ -5,9 +5,9 @@ import './homesection.styles.css';
 
 const HomeSection = ({ children, books, authors }) => {
     return(
-        <div className={`${books ? 'books-div' : authors ? 'authors-div' : ''} home-section-div`}>
+        <div >
             <Link to='/all-books' className='links'>
-                <div>
+                <div className={`${books ? 'books-div' : authors ? 'authors-div' : ''} home-section-div`}>
                     <h3>{children}</h3>
                 </div>
             </Link>
