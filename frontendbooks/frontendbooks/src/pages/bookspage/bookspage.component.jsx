@@ -24,9 +24,6 @@ const BooksPage = ({ hello, theBooks, getBooks, getError, error }) => {
         getAllBooks()
     }, [])
 
-    
-    console.log(error)
-
     return(
         
         <div className='home-page'>
