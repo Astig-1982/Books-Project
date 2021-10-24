@@ -31,7 +31,7 @@ const BooksPage = ({ hello, theBooks, getBooks, getError, error }) => {
             <h1>Books</h1>
             {error ? error 
             : theBooks.map((book) => (
-                <BookDisplay key={book.id} />
+                <BookDisplay key={book.id} book={book} />
             ))}
         </div>
     );
