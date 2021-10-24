@@ -4,6 +4,7 @@ import { createStructuredSelector } from 'reselect'; // yarn add reselect
 
 import { hello, books, error } from '../../redux/books/books.selectors';
 import { getBooks, getError } from '../../redux/books/books.actions';
+import BookDisplay from '../../components/bookdisplay/bookdisplay.component';
 
 
 const BooksPage = ({ hello, theBooks, getBooks, getError, error }) => {
@@ -28,11 +29,9 @@ const BooksPage = ({ hello, theBooks, getBooks, getError, error }) => {
         
         <div className='home-page'>
             <h1>Books</h1>
-            <h1>{hello}</h1>
-            <h1>{error}</h1>
             {error ? error 
             : theBooks.map((book) => (
-                <h2 key={book.id}>{book.name}</h2>
+                <BookDisplay key={book.id} />
             ))}
         </div>
     );
