@@ -6,9 +6,9 @@ import './bookdisplay.styles.css';
 
 const BookDisplay = ({ book }) => {
     return(
-        <div >
+        <div className='book-div'>
             <Link to=''>
-            <Card.Img src={book.image} className='book-image' /> 
+                <img src={book.image} className='book-image' /> 
                 <h3>{book.name}</h3>
             </Link>
         </div>
