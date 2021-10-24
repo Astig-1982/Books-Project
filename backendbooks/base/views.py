@@ -25,3 +25,13 @@ def all_books(request):
     serializer = BookSerializer(books, many=True)
     return Response(serializer.data)
 
+
+@api_view(['GET'])
+def book_detailed(request, book_id):
+    """
+    this view retrieves each individual book
+    """
+    book = Book.objects.get(id=book_id)
+    serializer = BookSerializer(book, many=False)
+    return Response(serializer.data)
+
