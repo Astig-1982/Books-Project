@@ -16,7 +16,3 @@ const HomeSection = ({ children, books, authors }) => {
 }
 
 export default HomeSection  
-
-
-
-

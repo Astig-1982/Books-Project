@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useEffect} from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect'; // yarn add reselect
 
@@ -34,9 +34,7 @@ const BooksPage = ({ hello, theBooks, getBooks, getError, error }) => {
             : theBooks.map((book) => (
                 <h2 key={book.id}>{book.name}</h2>
             ))}
-             
         </div>
-        
     );
 };
 
