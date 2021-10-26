@@ -26,8 +26,8 @@ const BookDetailed = ({match}) => {
     console.log(error)
     return(
         <div className='book-detailed'>
-            <h1>{error}</h1>
-            <h1>{detailedBook.name}</h1>
+            <img src={detailedBook.image} alt="" />
+            <h4>{detailedBook.name}</h4>
         </div>
     );   
 }
