@@ -23,7 +23,17 @@ def all_books(request):
     """
     this view retrieves all books 
     """
-    books = Book.objects.all().order_by('?')
+    books = Book.objects.all()
+    serializer = BookSerializer(books, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def all_books_alphabetical(request):
+    """
+    this view retrieves all books 
+    """
+    books = Book.objects.all().order_by('name')
     serializer = BookSerializer(books, many=True)
     return Response(serializer.data)
 
