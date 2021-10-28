@@ -19,21 +19,14 @@ def books_urls(request):
 
 
 @api_view(['GET'])
-def all_books(request):
+def all_books(request, order_by):
     """
     this view retrieves all books 
     """
-    books = Book.objects.all()
-    serializer = BookSerializer(books, many=True)
-    return Response(serializer.data)
-
-
-@api_view(['GET'])
-def all_books_a_to_z(request):
-    """
-    this view retrieves all books 
-    """
-    books = Book.objects.all().order_by('name')
+    if order_by == 'default_order':
+        books = Book.objects.all()
+    elif order_by == 'a_to_z':
+        books = Book.objects.all().order_by('name')
     serializer = BookSerializer(books, many=True)
     return Response(serializer.data)
 
