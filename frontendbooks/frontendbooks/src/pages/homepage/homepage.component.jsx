@@ -12,12 +12,12 @@ const HomePage = () => {
             <Container>
                 <Row>
                     <Col className='home-page-col'>
-                        <HomeSection authors>
+                        <HomeSection order_by = {'a_to_z'} authors>
                             Authors
                         </HomeSection>
                     </Col>
                     <Col className='home-page-div home-page-col'>
-                        <HomeSection books>
+                        <HomeSection order_by = {'default_order'} books>
                             Books
                         </HomeSection>
                     </Col>

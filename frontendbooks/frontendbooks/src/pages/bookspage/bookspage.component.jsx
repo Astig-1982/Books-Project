@@ -7,13 +7,13 @@ import { getBooks, getError } from '../../redux/books/books.actions';
 import BookDisplay from '../../components/bookdisplay/bookdisplay.component';
 
 
-const BooksPage = ({ hello, theBooks, getBooks, getError, error }) => {
+const BooksPage = ({ theBooks, getBooks, getError, error, match }) => {
 
     useEffect(() => {
         // this function calls the API and retrieves the books
         const getAllBooks = async() => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/all_books/')
+                const response = await fetch(`http://127.0.0.1:8000/all_books/${match.params.order_by}`)
                 const books = await response.json()
                 getBooks(books)
                 }
@@ -24,7 +24,7 @@ const BooksPage = ({ hello, theBooks, getBooks, getError, error }) => {
 
         getAllBooks()
     }, [])
-
+    
     return(
         
         <div className='home-page'>

@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Route exact path='/' component={ HomePage } />
-      <Route exact path='/all-books' component={ BooksPage } />
+      <Route exact path='/all-books/:order_by' component={ BooksPage } />
       <Route exact path='/all-books/book-detailed/:book_id' component={ BookDetailed } />
     </div>
   );
