@@ -29,7 +29,7 @@ def all_books(request):
 
 
 @api_view(['GET'])
-def all_books_alphabetical(request):
+def all_books_a_to_z(request):
     """
     this view retrieves all books 
     """
