@@ -1,6 +1,6 @@
 # The Books Project
 
-The Books Project is an app that serves as a guide to some of the most famous books and authors from classic to contemporary times.
+The Books Project is website that serves as a guide to some of the most famous books and authors from classic to contemporary times.
 
 ## Developer's Goals
 
