@@ -4,7 +4,7 @@ The Books Project is website that serves as a guide to some of the most famous b
 
 ## Developer's Goals
 
-This project is developed for educational purposes. I am creating this project using React for frontend and Django for backend. Having studied Django earlier this year, and finishing a comprehensive course on React this autumn, starting developing a personal project involving two of my favourite technologies - the aforementioned ones - was a no brainer.
+This project is developed for educational purposes. I am creating this project using **React** for frontend and **Django** for backend. Having studied **Django** earlier this year and finishing a comprehensive course on **React** this autumn, starting developing a personal project involving two of my favourite technologies - the aforementioned ones - was a no brainer.
 
 ## Project Goals
 
