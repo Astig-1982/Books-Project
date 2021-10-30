@@ -4,6 +4,7 @@ import HomeSection from '../../components/homesection/homesection.component';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import './homepage.styles.css';
+import FilterItems from '../../components/filtering/filtering.component';
 
 const HomePage = () => {
 
@@ -17,6 +18,7 @@ const HomePage = () => {
                         </HomeSection>
                     </Col>
                     <Col className='home-page-div home-page-col'>
+                    <FilterItems />
                         <HomeSection order_by = {'default_order'} books>
                             Books
                         </HomeSection>

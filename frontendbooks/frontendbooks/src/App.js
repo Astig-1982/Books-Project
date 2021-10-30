@@ -11,9 +11,11 @@ import BookDetailed from './components/bookdetailed/bookdetailed.component';
 function App() {
   return (
     <div className="App">
-      <Route exact path='/' component={ HomePage } />
-      <Route exact path='/all-books/:order_by' component={ BooksPage } />
-      <Route exact path='/all-books/book-detailed/:book_id' component={ BookDetailed } />
+      <Switch>
+        <Route exact path='/' component={ HomePage } />
+        <Route exact={false} path='/all-books/:order_by' component={ BooksPage } />
+        <Route exact path='/all-books/book-detailed/:book_id' component={ BookDetailed } />
+      </Switch>
     </div>
   );
 }
