@@ -21,7 +21,7 @@ class Book(models.Model):
     genre1 = ForeignKey(Book_Genre, on_delete=models.SET_NULL, max_length=50, null=True, blank=False, related_name='main_genre') # blank=True means the filed is required to be completed in django admin
     genre2 = ForeignKey(Book_Genre, on_delete=models.SET_NULL, max_length=50, null=True, blank=True, related_name='secondary_genre')
     genre3 = ForeignKey(Book_Genre, on_delete=models.SET_NULL, max_length=50, null=True, blank=True, related_name='third_genre') 
-    author = ForeignKey(Author, on_delete=models.SET_NULL, max_length=254, null=True, blank=True)
+    author = ForeignKey(Author, on_delete=models.SET_NULL, max_length=254, null=True, blank=False)
     about = TextField(max_length=300, null=True, blank=False)
     summary = TextField(null=True, blank=False)
     period = ForeignKey(Period, on_delete=models.SET_NULL, max_length=100, null=True, blank=True)
