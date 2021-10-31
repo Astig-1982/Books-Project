@@ -18,7 +18,6 @@ const HomePage = () => {
                         </HomeSection>
                     </Col>
                     <Col className='home-page-div home-page-col'>
-                    <FilterItems />
                         <HomeSection order_by = {'default_order'} books>
                             Books
                         </HomeSection>

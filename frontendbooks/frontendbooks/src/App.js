@@ -13,8 +13,8 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path='/' component={ HomePage } />
-        <Route exact={false} path='/all-books/:order_by' component={ BooksPage } />
-        <Route exact path='/all-books/book-detailed/:book_id' component={ BookDetailed } />
+        <Route exact path='/all-books/:order_by' component={ BooksPage } />
+        <Route path='/all-books/book-detailed/:book_id' component={ BookDetailed } />
       </Switch>
     </div>
   );
