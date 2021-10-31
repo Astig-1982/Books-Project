@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useHistory } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect'; // yarn add reselect
+import { Row, Col } from 'react-bootstrap'
 
 import { hello, books, error } from '../../redux/books/books.selectors';
 import { getBooks, getError } from '../../redux/books/books.actions';
@@ -35,12 +36,12 @@ const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
             <h1>Books</h1>
             <SortItems sort_method={'a_to_z'}>Order By Name</SortItems>
             <SortItems sort_method={'default_order'}>Default Order</SortItems>
-            <div className='books-display'>
+            <Row className='books-row'>
                 {error ? error 
                 : theBooks.map((book) => (
-                    <BookDisplay key={book.id} book={book} />
-                ))}
-            </div>
+                    <Col xs={2}><div className='books-display'><BookDisplay key={book.id} book={book} /></div></Col>
+                ))}     
+            </Row>
         </div>
     );
 };
