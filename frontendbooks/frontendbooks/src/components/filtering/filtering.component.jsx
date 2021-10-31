@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 import './filtering.styles.css';
 
-const FilterItems = () => {
+const FilterItems = ({ filter_method, children }) => {
     return(
         <div className='filter-div'>
-            <Link to='/all-books/a_to_z'>
-                Order By Name
+            <Link to={`/all-books/${filter_method}`}>
+                {children}
             </Link>
         </div>
     );   

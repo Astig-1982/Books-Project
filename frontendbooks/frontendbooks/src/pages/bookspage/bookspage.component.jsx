@@ -33,7 +33,8 @@ const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
     return(
         <div className='home-page'>
             <h1>Books</h1>
-            <FilterItems />
+            <FilterItems filter_method={'a_to_z'}>Order By Name</FilterItems>
+            <FilterItems filter_method={'default_order'}>Default Order</FilterItems>
             <div className='books-display'>
                 {error ? error 
                 : theBooks.map((book) => (
