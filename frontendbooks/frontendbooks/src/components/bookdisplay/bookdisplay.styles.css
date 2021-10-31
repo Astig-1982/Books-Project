@@ -1,11 +1,12 @@
-.book-div {
-    width: 10rem;
-    border: 1px solid #000;
+
+
+.book-card {
+    width: 12em;
+    height: 28rem;
 }
 
 .book-image {
-    width: 10rem;
-    height: 12rem;
+    height: 16rem;
 }
 
 .book-details {
