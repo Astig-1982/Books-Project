@@ -17,7 +17,12 @@
     text-transform: capitalize;
 }
 
+.book-genre {
+    color: cadetblue;
+    font-size: 81%;
+}
+
 .book-action {
     position: absolute;
-    bottom: 1.9rem;
+    bottom: .8rem;
 }
