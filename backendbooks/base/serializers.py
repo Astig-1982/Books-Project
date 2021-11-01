@@ -9,6 +9,7 @@ class BookSerializer(serializers.ModelSerializer):
     """
     author = serializers.StringRelatedField(many=False) # StringRelatedField is used to make the relation with Author model. It is used for author filed. Check StringRelatedField at django rest api documentation
     period = serializers.StringRelatedField(many=False)
+    type = serializers.StringRelatedField(many=False)
     
     class Meta:
         model = Book
