@@ -40,7 +40,7 @@ const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
                 <Row className='books-row'>
                     {error ? error 
                     : theBooks.map((book) => (
-                        <Col xs={2}><div className='books-display'><BookDisplay key={book.id} book={book} /></div></Col>
+                        <Col xs={3}><div className='books-display'><BookDisplay key={book.id} book={book} /></div></Col>
                     ))}     
                 </Row>
             </Container>

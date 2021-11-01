@@ -9,16 +9,16 @@ const BookDisplay = ({ book }) => {
     return(
         
         <div className='book-div'>
-                <Card className='book-card' style={{ width: '10rem' }}>
+                <Card className='book-card'>
                     <Link to={`/all-books/book-detailed/${book.id}`}>
                         <Card.Img className='book-image' variant="top" src={book.image} />
                     </Link>
                     <Card.Body>
-                        <Card.Title>{book.name}</Card.Title>
-                        <Card.Text>
+                        <Card.Title className='book-title'>{book.name}</Card.Title>
+                        <Card.Text className='book-author'>
                             {book.author}
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
+                        <Button variant="primary" className='book-action'>Go somewhere</Button>
                     </Card.Body>
                 </Card>  
         </div>
