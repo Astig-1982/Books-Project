@@ -16,7 +16,10 @@ const BookDisplay = ({ book }) => {
                     <Card.Body>
                         <Card.Title className='book-title'>{book.name}</Card.Title>
                         <Card.Text className='book-author'>
-                            {book.author}
+                            <div> by {book.author} </div>
+                        </Card.Text>
+                        <Card.Text className='book-details'>
+                            <div>{book.period} Novel</div>
                         </Card.Text>
                         <Button variant="primary" className='book-action'>Go somewhere</Button>
                     </Card.Body>
