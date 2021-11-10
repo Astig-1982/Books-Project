@@ -19,15 +19,11 @@ const BookDisplay = ({ book }) => {
                             <div> by {book.author.name}</div>
                             <div> by {book.author.nationality.name} </div>
                             <div>{book.genre1.name} {book.genre2 ? book.genre2.name : null} {book.genre3 ? book.genre3.name : null}</div>
-                            
                             <div> by {book.period.name}</div>
-                            <div> by {book.period.time_frames}</div>
-                            
+                            <div> by {book.period.time_frames}</div>    
                         </Card.Text>
-                        <Card.Text className='book-details'>
-                            
+                        <Card.Text className='book-details'>   
                         </Card.Text>
-                        
                     </Card.Body>
                 </Card>  
         </div>
