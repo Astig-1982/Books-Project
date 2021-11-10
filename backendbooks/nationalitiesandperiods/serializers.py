@@ -4,10 +4,8 @@ from .models import Nationality
 
 class NatinalitySerializer(serializers.ModelSerializer):
     """
-    this serializer is for the Author model
+    this serializer is for the Nationality model
     """
-    
-    nationality = serializers.StringRelatedField(many=False)
 
     class Meta:
         model = Nationality
