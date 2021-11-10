@@ -16,7 +16,7 @@ const BookDisplay = ({ book }) => {
                     <Card.Body>
                         <Card.Title className='book-title'>{book.name}</Card.Title>
                         <Card.Text className='book-author'>
-                            <div> by {book.author} </div>
+                            <div> by {book.author }</div>
                         </Card.Text>
                         <Card.Text className='book-details'>
                             <div className='book-genre'>{book.genre1} {book.genre2} {book.genre3}</div>
