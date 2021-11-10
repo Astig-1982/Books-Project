@@ -16,13 +16,18 @@ const BookDisplay = ({ book }) => {
                     <Card.Body>
                         <Card.Title className='book-title'>{book.name}</Card.Title>
                         <Card.Text className='book-author'>
-                            <div> by {book.author}</div>
+                            <div> by {book.author.name}</div>
+                            <div> by {book.author.nationality.name} </div>
+                            <div>{book.genre1.name} {book.genre2 ? book.genre2.name : null} {book.genre3 ? book.genre3.name : null}</div>
+                            
+                            <div> by {book.period.name}</div>
+                            <div> by {book.period.time_frames}</div>
+                            
                         </Card.Text>
                         <Card.Text className='book-details'>
-                            <div className='book-genre'>{book.genre1} {book.genre2} {book.genre3}</div>
-                            <div className='book-period'>{book.period} {book.type}</div>
+                            
                         </Card.Text>
-                        <Button variant="primary" className='book-action'>Go somewhere</Button>
+                        
                     </Card.Body>
                 </Card>  
         </div>
@@ -30,6 +35,10 @@ const BookDisplay = ({ book }) => {
 }
 
 export default BookDisplay
+
+/* <div className='book-genre'>{book.genre1.name} {book.genre2} {book.genre3}</div>
+                            <div className='book-period'>{book.period.name} {book.type}</div>
+                            <Button variant="primary" className='book-action'>Go somewhere</Button> */
 
 
 
