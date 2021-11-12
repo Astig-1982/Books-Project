@@ -14,15 +14,11 @@ const BookDisplay = ({ book }) => {
                         <Card.Img className='book-image' variant="top" src={book.image} />
                     </Link>
                     <Card.Body>
-                        <Card.Title className='book-title'>{book.name}</Card.Title>
+                        <Card.Title className='book-title'><h5>{book.name}</h5></Card.Title>
                         <Card.Text className='book-author'>
-                            <div> by {book.author.name}</div>
-                            <div> by {book.author.nationality.name} </div>
-                            <div>{book.genre1.name} {book.genre2 ? book.genre2.name : null} {book.genre3 ? book.genre3.name : null}</div>
-                            <div> by {book.period.name}</div>
-                            <div> by {book.period.time_frames}</div>    
-                        </Card.Text>
-                        <Card.Text className='book-details'>   
+                            <div className='book-details-1'>{book.period.name} {book.type.name}</div>
+                            <div> By {book.author.name}</div>
+                            <div className='book-genre'>{book.genre1.name} {book.genre2 ? book.genre2.name : null} {book.genre3 ? book.genre3.name : null}</div>
                         </Card.Text>
                     </Card.Body>
                 </Card>  
@@ -31,20 +27,3 @@ const BookDisplay = ({ book }) => {
 }
 
 export default BookDisplay
-
-/* <div className='book-genre'>{book.genre1.name} {book.genre2} {book.genre3}</div>
-                            <div className='book-period'>{book.period.name} {book.type}</div>
-                            <Button variant="primary" className='book-action'>Go somewhere</Button> */
-
-
-
-/*
-<Link to={`/all-books/book-detailed/${book.id}`}>
-                <div className='link-div'>
-                    <img src={book.image} className='book-image' />
-                    <div className='book-details'>
-                        <span>{book.name}</span>
-                    </div>
-                </div> 
-            </Link>
-*/

@@ -13,6 +13,7 @@ import SortItems from '../../components/filtering/filtering.component';
 const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
 
     const [books_order, setOrder] = useState('')
+
     
     useEffect(() => {
         // this function calls the API and retrieves the books
