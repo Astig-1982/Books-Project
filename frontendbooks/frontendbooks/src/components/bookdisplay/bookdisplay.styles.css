@@ -13,14 +13,27 @@
     font-size: 100%;
 }
 
+.long-title {
+    font-size: 115%;
+}
+
 .book-details-1 {
     text-transform: capitalize;
+}
+
+.origins, .book-genre {
+    font-size: 81%;
+    position: absolute;
 }
 
 .book-genre {
     margin-top: 1rem;
     color: cadetblue;
-    font-size: 81%;
+    bottom: 2rem;
+}
+
+.origins {
+    bottom: .8rem;
 }
 
 .book-action {
