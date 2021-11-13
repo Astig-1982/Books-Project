@@ -19,14 +19,24 @@ def books_urls(request):
 
 
 @api_view(['GET'])
-def all_books(request, sort_by):
+def all_books(request):
     """
     this view retrieves all books 
     """
-    if sort_by == 'default_order':
-        books = Book.objects.all()
-    elif sort_by == 'a_to_z':
+    books = Book.objects.all()
+    if 'author' in request.GET:
+            author = request.GET['author']
+            books = books.filter(author__name__exact=author)
+
+    if 'sort' in request.GET:
+        sort = request.GET['sort']
+        books = books.order_by(sort)
+    """
+    if sort_by == 'a_to_z':
         books = Book.objects.all().order_by('name')
+    else:
+        books = Book.objects.all()
+    """
     serializer = BookSerializer(books, many=True)
     return Response(serializer.data)
 
