@@ -7,8 +7,8 @@ const SortItems = ({ sort_method, children }) => {
     return(
         // this link will open BooksPage component and will pass it the filter_method 
         // the filter_method will then be added to the API call which will pass it to the urls of base app (books app) in django
-        <div className='filter-div'>
-            <Link to={`/all-books/${sort_method}`}> 
+        <div>
+            <Link className='order-by-link' to={`/all-books/${sort_method}`}> 
                 {children}
             </Link>
         </div>
