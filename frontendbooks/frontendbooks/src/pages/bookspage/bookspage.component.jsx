@@ -9,6 +9,8 @@ import BookDisplay from '../../components/bookdisplay/bookdisplay.component';
 import { Link } from 'react-router-dom';
 import SortItems from '../../components/filtering/filtering.component';
 
+import './bookspage.styles.css';
+
 
 const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
 
@@ -35,9 +37,13 @@ const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
     return(
         <div className='home-page'>
             <Container>
-                <h1>Books</h1>
-                <SortItems sort_method={'a_to_z'}>Order By Name</SortItems>
-                <SortItems sort_method={'default_order'}>Default Order</SortItems>
+                <div className='title'>
+                    <h1>Books</h1>
+                </div>
+                <div className='order-by-div'>
+                    <SortItems className='sort-items' sort_method={'default_order'}>Default Order</SortItems>
+                    <SortItems className='sort-items' sort_method={'a_to_z'}>Order By Name</SortItems>
+                </div>
                 <Row className='books-row'>
                     {error ? error 
                     : theBooks.map((book) => (
