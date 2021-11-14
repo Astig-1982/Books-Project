@@ -51,7 +51,8 @@ const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
                 <div className='order-by-div'>
                 
                     
-                    <SortItems className='sort-items' filter_method={'author=Fyodor'}>Fyodor</SortItems>
+                    <SortItems className='sort-items' filter_method={'author=Fyodor Dostoevsky'}>Fyodor Dostoevsky</SortItems>
+                    <SortItems className='sort-items' filter_method={'sort=default_order'}>Default Order</SortItems>
                     <SortItems className='sort-items' filter_method={'sort=name'}>Order By Name</SortItems>
                 </div>
                 <Row className='books-row'>

@@ -30,7 +30,10 @@ def all_books(request):
 
     if 'sort' in request.GET:
         sort = request.GET['sort']
-        books = books.order_by(sort)
+        if sort == 'default_order':
+            books = books
+        else:
+            books = books.order_by(sort)
     """
     if sort_by == 'a_to_z':
         books = Book.objects.all().order_by('name')
