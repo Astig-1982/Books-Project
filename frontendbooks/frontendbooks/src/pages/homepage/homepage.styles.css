@@ -6,3 +6,13 @@
     background: url(./library-books.jpeg) no-repeat center center;
     height: 100vh;
 }
+
+.links-div {
+    margin-top: 30%;
+    text-align: center;
+}
+
+.links {
+    color: #fff;
+    margin: 0 1rem;
+}

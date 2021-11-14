@@ -13,12 +13,14 @@ const HomePage = () => {
             <Container fluid>
                 <Row>
                     <Col className='home-page-col'>
-                        <Link to='/all-books/no_filter' className='links'>
-                            Books
-                        </Link>
-                        <Link to='/all-books/no_filter' className='links'>
-                            Authors
-                        </Link>
+                        <div className='links-div'>
+                            <Link to='/all-books/no_filter' className='links'>
+                                Books
+                            </Link>
+                            <Link to='/all-books/no_filter' className='links'>
+                                Authors
+                            </Link>
+                        </div>
                     </Col>
                 </Row>
             </Container>
