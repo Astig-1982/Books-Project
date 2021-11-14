@@ -14,12 +14,18 @@ const HomePage = () => {
                 <Row>
                     <Col className='home-page-col'>
                         <div className='links-div'>
-                            <Link to='/all-books/no_filter' className='links'>
-                                Books
-                            </Link>
-                            <Link to='/all-books/no_filter' className='links'>
-                                Authors
-                            </Link>
+                            <Row>
+                                <Col xs={6}>
+                                    <Link to='/all-books/no_filter' className='links'>
+                                        <div className='buttons-links'>BOOKS</div>
+                                    </Link>
+                                </Col>
+                                <Col xs={6}>
+                                    <Link to='/all-books/no_filter' className='links'>
+                                        <div className='buttons-links'>AUTHORS</div>
+                                    </Link>
+                                </Col>
+                            </Row>
                         </div>
                         <div className='quote-div'>
                             <p className='quote-paragraph'>I am reading six books at once, the only 

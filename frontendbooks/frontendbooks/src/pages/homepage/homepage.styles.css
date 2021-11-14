@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap')
+
 .home-container {
     height: 100vh;
 }
@@ -19,13 +21,37 @@
 }
 
 .links-div {
-    margin-top: 30%;
+    position: absolute;
+    top: 45.9%;
+    left: 43%;
     text-align: center;
 }
 
 .links {
-    color: #fff;
     margin: 0 1rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.buttons-links {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    width: 135px;
+    height: 41px;
+    text-align: center;
+    padding-top: 5.4%;
+    font-size: 110%;
+    font-weight: bold;
+    transition-property: background, color;
+    transition-duration: .8s;
+    transition-timing-function: ease;
+    font-family: 'Nunito', sans-serif;
+}
+
+.buttons-links:hover {
+    color: #000;
+    background: #fff;
 }
 
 .quote-div {
