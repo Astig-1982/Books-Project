@@ -3,23 +3,6 @@
 }
 
 .home-page-col {
-    position: relative;
+    background: url(./library-books.jpeg) no-repeat center center;
+    height: 100vh;
 }
-
-/*
-
-.home-page-div {
-    width: 60vw;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.home-page-col {
-    margin-top: 18vh;
-}
-
-.login-div {
-    background: blue;
-}
-
-*/
