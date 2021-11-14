@@ -21,6 +21,17 @@ const HomePage = () => {
                                 Authors
                             </Link>
                         </div>
+                        <div className='quote-div'>
+                            <p className='quote-paragraph'>I am reading six books at once, the only 
+                                way of reading; since, as you will agree, 
+                                one book is only a single unaccompanied note, 
+                                and to get the full sound, one needs ten 
+                                others at the same time.
+                            </p>
+                            <p className='author-paragraph'>
+                                — Virginia Woolf
+                            </p>
+                        </div>
                     </Col>
                 </Row>
             </Container>
