@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@300&family=Nunito&display=swap');
 
 .home-container {
     height: 100vh;
@@ -47,11 +47,15 @@
     transition-duration: .8s;
     transition-timing-function: ease;
     font-family: 'Nunito', sans-serif;
+    letter-spacing: .8pt;
 }
 
 .buttons-links:hover {
     color: #000;
-    background: #fff;
+    background: rgb(201, 198, 193);
+    /*
+    background: rgba(255, 255, 255, .7);
+    */
 }
 
 .quote-div {
@@ -64,4 +68,11 @@
 
 .quote-paragraph {
     font-size: 164%;
+    font-family: 'Montagu Slab', serif;
+}
+
+.author-paragraph {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    letter-spacing: .2pt;
 }
