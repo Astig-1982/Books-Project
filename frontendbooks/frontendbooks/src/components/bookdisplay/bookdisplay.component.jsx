@@ -7,7 +7,6 @@ import './bookdisplay.styles.css';
 const BookDisplay = ({ book }) => {
     
     return(
-        
         <div className='book-div'>
                 <Card className='book-card'>
                     <Link to={`/all-books/book-detailed/${book.id}`}>
