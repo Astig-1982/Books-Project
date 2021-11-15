@@ -15,12 +15,12 @@ const BookDisplay = ({ book }) => {
                     </Link>
                     <Card.Body className='book-body'>
                         <Card.Title className='book-title'><h5 className={`${book.name.length >= 24 ? 'long-title' : null}`}>{book.name}</h5></Card.Title>
-                        <Card.Text className='book-author'>
+                        <Card.Text>
                             <div className='book-details-1'>{book.period.name} {book.type.name}</div>
-                            <div> By {book.author.name}</div>
+                            <div> By <span className='book-author'>{book.author.name}</span></div>
                             <div className='book-details-2'>
-                            <div className='book-genre'>{book.genre1.name} {book.genre2 ? book.genre2.name : null} {book.genre3 ? book.genre3.name : null}</div>
-                            <div className='origins'>{book.author.nationality.name} Literature</div>
+                                <div className='book-genre'>{book.genre1.name} {book.genre2 ? book.genre2.name : null} {book.genre3 ? book.genre3.name : null}</div>
+                                <div className='origins'>{book.author.nationality.name} Literature</div>
                             </div>
                         </Card.Text>
                     </Card.Body>

@@ -49,8 +49,6 @@ const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
                     Fyodor Dostoevsky
                 </Link>
                 <div className='order-by-div'>
-                
-                    
                     <SortItems className='sort-items' filter_method={'author=Fyodor Dostoevsky'}>Fyodor Dostoevsky</SortItems>
                     <SortItems className='sort-items' filter_method={'sort=default_order'}>Default Order</SortItems>
                     <SortItems className='sort-items' filter_method={'sort=name'}>Order By Name</SortItems>
@@ -58,7 +56,7 @@ const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
                 <Row className='books-row'>
                     {error ? error 
                     : theBooks.map((book) => (
-                        <Col xs={3}><div className='books-display'><BookDisplay key={book.id} book={book} /></div></Col>
+                        <Col xs={3} className='books-display'><div><BookDisplay key={book.id} book={book} /></div></Col>
                     ))}     
                 </Row>
             </Container>
