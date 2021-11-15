@@ -3,7 +3,18 @@
     height: 28rem;
     margin-bottom: 2.1rem;
     position: relative;
+    border: none;
 }
+
+/*
+h1 {
+    color: #fff;
+}
+
+h5 {
+    color: #fff;
+}
+*/
 
 .book-image {
     height: 16rem;
@@ -15,6 +26,15 @@
 
 .long-title {
     font-size: 115%;
+}
+
+.book-author {
+    color: #fff;
+}
+
+.book-body {
+    padding: 1rem;
+    background: #2d424a;
 }
 
 .book-details-1 {
@@ -36,7 +56,3 @@
     bottom: .8rem;
 }
 
-.book-action {
-    position: absolute;
-    bottom: .8rem;
-}

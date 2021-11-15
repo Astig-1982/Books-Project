@@ -1,3 +1,7 @@
 body {
     font-size: 16px;
+    background: linear-gradient(to right, #872203 , #ebddb9);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: max-content;
 }
