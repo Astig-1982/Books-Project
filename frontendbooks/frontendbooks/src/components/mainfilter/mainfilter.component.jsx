@@ -35,8 +35,3 @@ const MainFilter = () => {
 }
 
 export default MainFilter
-
-/* {theBooks.map((book) => (
-                        <SortItems className='sort-items' filter_method={`author=${book.author.name}`}>{book.author.name}</SortItems>
-            ))}
-*/
