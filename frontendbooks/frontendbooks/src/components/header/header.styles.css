@@ -1,6 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&family=Nunito+Sans:wght@700&display=swap');
+
 .navbar {
     position: fixed;
     top: 0;
     z-index: +1;
     width: 100vw;
 }
+
+.navbar-brand-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 160%;
+    letter-spacing: .5rem;
+    font-family: 'EB Garamond', serif;
+}
+
+.links {
+    color: #fff;
+}
+
+.navbar-brand-link:hover,
+.links:hover {
+    color: #fff;
+}
+
+.navbar-expand-lg .navbar-nav {
+    margin-left: 32.5rem;
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 1.5pt;
+}
+
+.books {
+    margin-right: 9rem;
+}
+
