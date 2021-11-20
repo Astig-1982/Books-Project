@@ -4,9 +4,10 @@ import SortItems from '../filtering/filtering.component';
 
 import './mainfilter.styles.css';
 
-const MainFilter = () => {
+const MainFilter = ({history}) => {
 
     const [theBooks, getBooks] = useState('')
+    const [theHook, getHooks] = useState('')
     const [error, getError] = useState('')
 
     useEffect(() => {
@@ -23,15 +24,20 @@ const MainFilter = () => {
         }
 
         getAllBooks()
-    }, [])
+    }, [theHook])
     
     return(
         <div>
-            {theBooks.map((book) => (
+            {theBooks? theBooks.map((book) => (
                         <SortItems className='sort-items' filter_method={`author=${book.author.name}`}>{book.author.name}</SortItems>
-            ))}
+            )) : 'loading...'}
         </div>
     );   
 }
 
 export default MainFilter
+
+/* {theBooks.map((book) => (
+                        <SortItems className='sort-items' filter_method={`author=${book.author.name}`}>{book.author.name}</SortItems>
+            ))}
+*/
