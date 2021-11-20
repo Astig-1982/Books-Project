@@ -27,7 +27,9 @@ const MainFilter = () => {
     console.log(theBooks)
     return(
         <div>
-            
+            {theBooks.map((book) => (
+                        <SortItems className='sort-items' filter_method={`author=${book.author.name}`}>{book.author.name}</SortItems>
+            ))}
         </div>
     );   
 }
