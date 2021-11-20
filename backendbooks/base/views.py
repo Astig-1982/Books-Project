@@ -34,12 +34,7 @@ def all_books(request):
             books = books
         else:
             books = books.order_by(sort)
-    """
-    if sort_by == 'a_to_z':
-        books = Book.objects.all().order_by('name')
-    else:
-        books = Book.objects.all()
-    """
+    
     serializer = BookSerializer(books, many=True)
     return Response(serializer.data)
 
