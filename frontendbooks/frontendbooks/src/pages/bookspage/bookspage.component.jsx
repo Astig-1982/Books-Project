@@ -24,6 +24,12 @@ const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
         const getAllBooks = async() => {
             try {
                 {const response = await fetch(`http://127.0.0.1:8000/all_books/?${match.params.filter_method}`)
+                /*
+                    This url will be sent to base.urls path('all_books/', views.all_books, name='all_books')
+                    ${match.params.filter_method} is being sent from App.js, which gets it from SortItems component
+                    Depending what the this param is, the view will sort the books
+                    This is achieved in the view by the following conditional: if '{match.params.filter_method}' in request.GET -- check 'Solid Properties'
+                */
                 const books = await response.json()
                 getBooks(books)
                 setOrder(`${match.params.order_by}`)}
