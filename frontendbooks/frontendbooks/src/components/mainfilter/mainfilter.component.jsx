@@ -24,7 +24,7 @@ const MainFilter = () => {
 
         getAllBooks()
     }, [])
-    console.log(theBooks)
+    
     return(
         <div>
             {theBooks.map((book) => (
