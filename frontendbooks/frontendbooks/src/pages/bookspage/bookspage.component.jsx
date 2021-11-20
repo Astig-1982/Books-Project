@@ -46,7 +46,7 @@ const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
                 <div className='title'>
                     <h1>Books</h1>
                 </div>
-                <MainFilter theBooks={theBooks} />
+                <MainFilter />
                 <div className='order-by-div'>
                     <SortItems className='sort-items' filter_method={'author=Fyodor Dostoevsky'}>Fyodor Dostoevsky</SortItems>
                     <SortItems className='sort-items' filter_method={'sort=default_order'}>Default Order</SortItems>
