@@ -10,6 +10,7 @@ import BookDisplay from '../../components/bookdisplay/bookdisplay.component';
 import SortItems from '../../components/filtering/filtering.component';
 
 import './bookspage.styles.css';
+import MainFilter from '../../components/mainfilter/mainfilter.component';
 
 
 const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
@@ -45,9 +46,7 @@ const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
                 <div className='title'>
                     <h1>Books</h1>
                 </div>
-                <Link to=''> 
-                    Fyodor Dostoevsky
-                </Link>
+                <MainFilter theBooks={theBooks} />
                 <div className='order-by-div'>
                     <SortItems className='sort-items' filter_method={'author=Fyodor Dostoevsky'}>Fyodor Dostoevsky</SortItems>
                     <SortItems className='sort-items' filter_method={'sort=default_order'}>Default Order</SortItems>
