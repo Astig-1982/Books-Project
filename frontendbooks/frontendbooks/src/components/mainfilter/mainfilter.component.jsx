@@ -1,36 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SortItems from '../filtering/filtering.component';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import './mainfilter.styles.css';
+import AuthorsFilter from '../authorsfilter/authorsfilter.component';
 
-const MainFilter = ({history}) => {
-
-    const [theAuthors, getAuthors] = useState('')
-    const [theHook, getHooks] = useState('')
-    const [error, getError] = useState('')
-
-    useEffect(() => {
-        // this function calls the API and retrieves the books
-        const getAllBooks = async() => {
-            try {
-                const response = await fetch('http://127.0.0.1:8000/all_authors/')
-                const authors = await response.json()
-                getAuthors(authors)
-                }
-            catch(error) {
-                getError('there is an error')
-                }
-        }
-
-        getAllBooks()
-    }, [theHook])
+const MainFilter = () => {
     
     return(
         <div>
-            {theAuthors? theAuthors.map((author) => (
-                        <SortItems className='sort-items' filter_method={`author=${author.name}`}>{author.name}</SortItems>
-            )) : 'loading...'}
+            <Container className='main-filter-container'>
+                <Row className='main-filter-row'>
+                    <Col xs={6}>
+                        <div className='filter-divs'>
+                            <AuthorsFilter />
+                        </div>
+                    </Col>
+                    <Col xs={6}>
+                        <div className='filter-divs'>
+                            <AuthorsFilter />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );   
 }
