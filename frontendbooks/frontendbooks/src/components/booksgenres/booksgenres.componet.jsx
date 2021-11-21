@@ -13,7 +13,7 @@ const BooksGenresFilter = ({history}) => {
         // this function calls the API and retrieves the books
         const getAllBooks = async() => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/book_types/')
+                const response = await fetch('http://127.0.0.1:8000/book_genres/')
                 const authors = await response.json()
                 getGenres(authors)
                 }
@@ -28,7 +28,7 @@ const BooksGenresFilter = ({history}) => {
     return(
         <div>
             {theGenres? theGenres.map((genre) => (
-                        <SortItems className='sort-items' filter_method={`type=${genre.name}`}>{genre.name}</SortItems>
+                        <SortItems className='sort-items' filter_method={`genre=${genre.name}`}>{genre.name}</SortItems>
             )) : 'loading...'}
         </div>
     );   

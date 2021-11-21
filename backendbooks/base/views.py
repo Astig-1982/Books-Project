@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.db.models import Q
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
@@ -33,6 +34,10 @@ def all_books(request):
             type = request.GET['type']
             books = books.filter(type__name__exact=type)
 
+    if 'genre' in request.GET:
+            genre = request.GET['genre']
+            books = books.filter(Q(genre1__name__exact=str(genre)) | Q(genre2__name__exact=str(genre)) | Q(genre3__name__exact=str(genre)))
+
     if 'sort' in request.GET:
         sort = request.GET['sort']
         if sort == 'default_order':
@@ -42,6 +47,8 @@ def all_books(request):
     
     serializer = BookSerializer(books, many=True)
     return Response(serializer.data)
+
+    # Q(pk = int(customerid)) | Q(customer_name__contains = str(customerid)) | Q(customer_mobile_no__contains = str(customerid))
 
 
 @api_view(['GET'])
@@ -72,5 +79,5 @@ def book_genres(request):
     serializer = BookSerializer(book_genres, many=True)
     return Response(serializer.data)
 
-    # Q(pk = int(customerid)) | Q(customer_name__contains = str(customerid)) | Q(customer_mobile_no__contains = str(customerid))
+    
 
