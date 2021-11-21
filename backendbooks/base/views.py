@@ -4,7 +4,7 @@ from rest_framework.response import Response
 
 import random
 
-from .models import Book, Book_Type
+from .models import Book, Book_Type, Book_Genre
 from .serializers import BookSerializer, BookTypeSerializer
 
 # Create your views here.
@@ -24,7 +24,7 @@ def all_books(request):
     this view retrieves all books 
     """
     books = Book.objects.all()
-    
+
     if 'author' in request.GET:
             author = request.GET['author']
             books = books.filter(author__name__exact=author)
@@ -60,6 +60,17 @@ def book_types(request):
     this view retrieves book types
     """
     book_types = Book_Type.objects.all()
-    serializer = BookSerializer(book_types, many=True)
+    serializer = BookTypeSerializer(book_types, many=True)
     return Response(serializer.data)
+
+@api_view(['GET'])
+def book_genres(request):
+    """
+    this view retrieves book types
+    """
+    book_genres = Book_Genre.objects.all()
+    serializer = BookSerializer(book_genres, many=True)
+    return Response(serializer.data)
+
+    # Q(pk = int(customerid)) | Q(customer_name__contains = str(customerid)) | Q(customer_mobile_no__contains = str(customerid))
 
