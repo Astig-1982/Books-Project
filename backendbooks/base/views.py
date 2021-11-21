@@ -24,6 +24,7 @@ def all_books(request):
     this view retrieves all books 
     """
     books = Book.objects.all()
+    
     if 'author' in request.GET:
             author = request.GET['author']
             books = books.filter(author__name__exact=author)
