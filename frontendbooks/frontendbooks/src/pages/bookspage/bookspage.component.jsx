@@ -44,6 +44,7 @@ const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
     
     return(
         <div className='home-page'>
+            I am this page 
             <Container>
                 <div className='title'>
                     <h1>Books</h1>

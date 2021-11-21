@@ -6,7 +6,7 @@ import './mainfilter.styles.css';
 
 const MainFilter = ({history}) => {
 
-    const [theBooks, getBooks] = useState('')
+    const [theAuthors, getAuthors] = useState('')
     const [theHook, getHooks] = useState('')
     const [error, getError] = useState('')
 
@@ -14,9 +14,9 @@ const MainFilter = ({history}) => {
         // this function calls the API and retrieves the books
         const getAllBooks = async() => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/all_books/')
-                const books = await response.json()
-                getBooks(books)
+                const response = await fetch('http://127.0.0.1:8000/all_authors/')
+                const authors = await response.json()
+                getAuthors(authors)
                 }
             catch(error) {
                 getError('there is an error')
@@ -28,16 +28,11 @@ const MainFilter = ({history}) => {
     
     return(
         <div>
-            {theBooks? theBooks.map((book) => (
-                        <SortItems className='sort-items' filter_method={`author=${book.author.name}`}>{book.author.name}</SortItems>
+            {theAuthors? theAuthors.map((author) => (
+                        <SortItems className='sort-items' filter_method={`author=${author.name}`}>{author.name}</SortItems>
             )) : 'loading...'}
         </div>
     );   
 }
 
 export default MainFilter
-
-/* {theBooks.map((book) => (
-                        <SortItems className='sort-items' filter_method={`author=${book.author.name}`}>{book.author.name}</SortItems>
-            ))}
-*/
