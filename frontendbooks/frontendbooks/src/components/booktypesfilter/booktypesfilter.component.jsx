@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import SortItems from '../filtering/filtering.component';
 
-import './authorsfilter.styles.css';
+import './booktypesfilter.styles.css';
 
-const AuthorsFilter = ({history}) => {
+const BookTypesFilter = ({history}) => {
 
-    const [theAuthors, getAuthors] = useState('')
+    const [theTypes, getTypes] = useState('')
     const [theHook, getHooks] = useState('')
     const [error, getError] = useState('')
 
@@ -13,9 +13,9 @@ const AuthorsFilter = ({history}) => {
         // this function calls the API and retrieves the books
         const getAllBooks = async() => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/all_authors/')
+                const response = await fetch('http://127.0.0.1:8000/book_types/')
                 const authors = await response.json()
-                getAuthors(authors)
+                getTypes(authors)
                 }
             catch(error) {
                 getError('there is an error')
@@ -27,11 +27,11 @@ const AuthorsFilter = ({history}) => {
     
     return(
         <div>
-            {theAuthors? theAuthors.map((author) => (
-                        <SortItems className='sort-items' filter_method={`author=${author.name}`}>{author.name}</SortItems>
+            {theTypes? theTypes.map((type) => (
+                        <SortItems className='sort-items' filter_method={`type=${type.name}`}>{type.name}</SortItems>
             )) : 'loading...'}
         </div>
     );   
 }
 
-export default AuthorsFilter
+export default BookTypesFilter

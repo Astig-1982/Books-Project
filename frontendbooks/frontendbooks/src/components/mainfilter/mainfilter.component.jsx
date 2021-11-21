@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import './mainfilter.styles.css';
 import AuthorsFilter from '../authorsfilter/authorsfilter.component';
+import BookTypesFilter from '../booktypesfilter/booktypesfilter.component';
 
 const MainFilter = () => {
     
@@ -19,7 +20,7 @@ const MainFilter = () => {
                     </Col>
                     <Col xs={6}>
                         <div className='filter-divs'>
-                            <AuthorsFilter />
+                            <BookTypesFilter />
                         </div>
                     </Col>
                 </Row>
