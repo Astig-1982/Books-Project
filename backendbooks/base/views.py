@@ -4,7 +4,7 @@ from rest_framework.response import Response
 
 import random
 
-from .models import Book
+from .models import Book, Book_Type
 from .serializers import BookSerializer, BookTypeSerializer
 
 # Create your views here.
@@ -27,6 +27,10 @@ def all_books(request):
     if 'author' in request.GET:
             author = request.GET['author']
             books = books.filter(author__name__exact=author)
+
+    if 'type' in request.GET:
+            type = request.GET['type']
+            books = books.filter(type__name__exact=type)
 
     if 'sort' in request.GET:
         sort = request.GET['sort']
@@ -54,7 +58,7 @@ def book_types(request):
     """
     this view retrieves book types
     """
-    book_types = Book.objects.all()
-    serializer = BookSerializer(book_detailed, many=True)
+    book_types = Book_Type.objects.all()
+    serializer = BookSerializer(book_types, many=True)
     return Response(serializer.data)
 
