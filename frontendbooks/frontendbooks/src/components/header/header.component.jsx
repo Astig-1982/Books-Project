@@ -27,7 +27,10 @@ const Header = () => {
                             <Link to='/all-books/no_filter' className='links'>
                                 AUTHORS
                             </Link>
-                        </Nav.Link>    
+                        </Nav.Link>
+                        <Nav.Link className='filter'>
+                            FILTER
+                        </Nav.Link>        
                     </Nav>
                     </Navbar.Collapse>
                 </Container>
