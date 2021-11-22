@@ -69,6 +69,7 @@ def book_types(request):
     book_types = Book_Type.objects.all()
     serializer = BookTypeSerializer(book_types, many=True)
     return Response(serializer.data)
+    
 
 @api_view(['GET'])
 def book_genres(request):
