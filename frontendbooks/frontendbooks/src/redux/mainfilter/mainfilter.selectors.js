@@ -2,7 +2,7 @@ import { createSelector } from 'reselect'
 
 const getMainFilter = state => state.mainFilter
 
-export const toggle = createSelector(
+export const toggledFilter = createSelector(
     [getMainFilter],
-    toggleFilter => getMainFilter.hidden
+    getMainFilter => getMainFilter.hidden
 )

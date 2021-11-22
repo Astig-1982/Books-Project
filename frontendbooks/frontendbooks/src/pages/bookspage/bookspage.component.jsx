@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import { hello, books, error } from '../../redux/books/books.selectors';
+import { hidden, toggledFilter } from '../../redux/mainfilter/mainfilter.selectors';
 import { getBooks, getError } from '../../redux/books/books.actions';
 import BookDisplay from '../../components/bookdisplay/bookdisplay.component';
 import SortItems from '../../components/filtering/filtering.component';
@@ -13,7 +14,7 @@ import './bookspage.styles.css';
 import MainFilter from '../../components/mainfilter/mainfilter.component';
 
 
-const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
+const BooksPage = ({ theBooks, getBooks, getError, error, match, history, hidden }) => {
 
     const [books_order, setOrder] = useState('')
     
@@ -41,14 +42,16 @@ const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
 
         getAllBooks()
     }, [history.location.pathname])
-    
+    console.log(hidden)
     return(
         <div className='home-page'>
             <Container>
                 <div className='title'>
                     <h1>Books</h1>
                 </div>
-                <MainFilter />
+                {hidden
+                ? <MainFilter />
+                : null}
                 <div className='order-by-div'>
                     <SortItems className='sort-items' filter_method={'sort=default_order'}>Default Order</SortItems>
                     <SortItems className='sort-items' filter_method={'sort=name'}>Order By Name</SortItems>
@@ -67,13 +70,13 @@ const BooksPage = ({ theBooks, getBooks, getError, error, match, history }) => {
 const mapStateToProps = createStructuredSelector({
     hello: hello,
     theBooks: books,
-    error: error
+    error: error,
+    hidden: toggledFilter
 });
 
 const mapDispatchToProps = dispatch => ({
     getBooks: books => dispatch(getBooks(books)),
-    getError: error => dispatch(getError(error))
-    
+    getError: error => dispatch(getError(error)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksPage);
