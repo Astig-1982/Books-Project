@@ -7,7 +7,7 @@ import { Navbar, Nav, Container, NavDropdown, Row } from 'react-bootstrap'
 import './header.styles.css';
 import { toggleFilter } from '../../redux/mainfilter/mainfilter.actions';
 
-const Header = () => {
+const Header = ({ toggleFilter }) => {
     
     return(
         <div>
@@ -32,7 +32,7 @@ const Header = () => {
                             </Link>
                         </Nav.Link>
                         <Nav.Link className='filter'>
-                            FILTER
+                            <button onClick={() => {toggleFilter()}}>FILTER</button>
                         </Nav.Link>        
                     </Nav>
                     </Navbar.Collapse>
@@ -46,4 +46,4 @@ const mapDispatchToProps = dispatch => ({
     toggleFilter: () => dispatch(toggleFilter()),
 });
 
-export default connect(mapDispatchToProps)(Header);
+export default connect(null, mapDispatchToProps)(Header);
