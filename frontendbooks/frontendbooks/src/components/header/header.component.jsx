@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import { Navbar, Nav, Container, NavDropdown, Row } from 'react-bootstrap'
 
 import './header.styles.css';
+import { toggleFilter } from '../../redux/mainfilter/mainfilter.actions';
 
 const Header = () => {
     
@@ -39,4 +42,8 @@ const Header = () => {
     );   
 }
 
-export default Header
+const mapDispatchToProps = dispatch => ({
+    toggleFilter: () => dispatch(toggleFilter()),
+});
+
+export default connect(mapDispatchToProps)(Header);

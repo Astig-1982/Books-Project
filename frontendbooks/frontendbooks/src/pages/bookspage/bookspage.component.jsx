@@ -76,4 +76,4 @@ const mapDispatchToProps = dispatch => ({
     
 });
 
- export default connect(mapStateToProps, mapDispatchToProps)(BooksPage);
+export default connect(mapStateToProps, mapDispatchToProps)(BooksPage);
